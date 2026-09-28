@@ -618,16 +618,48 @@ img {
   align-items: flex-start;
 }
 
-.card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  background: rgba(52, 211, 153, 0.12);
-  border: 1px solid rgba(52, 211, 153, 0.3);
-  display: grid;
-  place-items: center;
-  font-size: 1.25rem;
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.25);
+/* Card Hardware / Preview Image */
+.card-image-wrap {
+  width: 100%;
+  border-radius: var(--radius-bubble-sm);
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border-highlight);
+  box-shadow: 
+    inset 0 1px 1px rgba(255, 255, 255, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
+  position: relative;
+  margin-top: 0.25rem;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform var(--transition-normal);
+}
+
+.card:hover .card-image-wrap img {
+  transform: scale(1.03);
+}
+
+.card-image-badge {
+  position: absolute;
+  bottom: 0.65rem;
+  left: 0.65rem;
+  font-size: 0.725rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  background: rgba(8, 14, 11, 0.88);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: var(--moss-light);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 /* Earthy Amber & Forest Badges */
