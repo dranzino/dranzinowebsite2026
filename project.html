@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects Portfolio of Alex Morgan - Explore full-stack applications, developer tools, and user interface experiments.">
+  <title>Projects & Work | Alex Morgan</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Filter Tabs Styling */
+    .filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 0.5rem 1.15rem;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      font-family: inherit;
+    }
+    .filter-btn:hover {
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .filter-btn.active {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: var(--primary);
+      color: #fff;
+    }
+    .project-card-hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container site-nav">
+      <a href="index.html" class="brand-logo" id="brand-logo">
+        <span class="logo-symbol">AM</span>
+        <span>Alex Morgan</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="project.html" class="active" id="nav-projects">Projects</a></li>
+          <li><a href="resume.html" id="nav-resume">Resume</a></li>
+        </ul>
+      </nav>
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Projects Hero Header -->
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="hero-badge">
+        <span>Portfolio Showcase</span>
+      </div>
+      <h1 class="hero-title">Selected <span class="gradient-text">Projects &amp; Builds</span></h1>
+      <p class="hero-subtitle">
+        A curated showcase of applications, developer tools, and client platforms I have created. Explore the source repositories and interactive demonstrations.
+      </p>
+    </section>
+
+    <!-- Project Filter Buttons -->
+    <div class="filter-tabs" role="tablist" aria-label="Filter projects">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="frontend">Frontend / UI</button>
+      <button class="filter-btn" data-filter="tooling">Developer Tools</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <section class="card-grid" id="projects-grid">
+      <!-- Project 1 -->
+      <article class="card" data-category="fullstack">
+        <div class="card-top">
+          <div class="card-icon">📊</div>
+          <span class="card-badge">Full Stack</span>
+        </div>
+        <div class="card-body">
+          <h3>CloudPulse Analytics</h3>
+          <p>Real-time distributed telemetry and observability platform with customizable dashboard widgets, alerting thresholds, and PostgreSQL aggregation.</p>
+          <div class="tags-list">
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+          <a href="#" class="link-btn">Live Preview &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card" data-category="frontend">
+        <div class="card-top">
+          <div class="card-icon">⚡</div>
+          <span class="card-badge">Frontend / UI</span>
+        </div>
+        <div class="card-body">
+          <h3>DesignCraft Component Kit</h3>
+          <p>An accessible, production-ready component library built with pure CSS and vanilla JavaScript. Features dark mode, fluid responsiveness, and keyboard accessibility.</p>
+          <div class="tags-list">
+            <span class="tag">HTML5</span>
+            <span class="tag">Modern CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">A11y</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
+          <a href="#" class="link-btn">Documentation &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card" data-category="tooling">
+        <div class="card-top">
+          <div class="card-icon">🛠️</div>
+          <span class="card-badge">Developer Tools</span>
+        </div>
+        <div class="card-body">
+          <h3>SyntaxAI Code Reviewer</h3>
+          <p>Command line interface that scans Git commits for code smells, security vulnerabilities, and formatting consistency using automated LLM checks.</p>
+          <div class="tags-list">
+            <span class="tag">Python</span>
+            <span class="tag">CLI</span>
+            <span class="tag">OpenAI API</span>
+            <span class="tag">Git Hooks</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo</a>
+          <a href="#" class="link-btn">PyPI Package &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card" data-category="fullstack">
+        <div class="card-top">
+          <div class="card-icon">🛒</div>
+          <span class="card-badge">Full Stack</span>
+        </div>
+        <div class="card-body">
+          <h3>Aura E-Commerce Engine</h3>
+          <p>Headless commerce storefront integrated with Stripe payments, cart state persistence, dynamic product inventory, and instant search indexing.</p>
+          <div class="tags-list">
+            <span class="tag">Next.js</span>
+            <span class="tag">Stripe API</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
+          <a href="#" class="link-btn">Storefront &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 5 -->
+      <article class="card" data-category="frontend">
+        <div class="card-top">
+          <div class="card-icon">🎵</div>
+          <span class="card-badge">Frontend / UI</span>
+        </div>
+        <div class="card-body">
+          <h3>SonicWave Audio Visualizer</h3>
+          <p>Interactive web audio visualizer built using Web Audio API and HTML5 Canvas. Renders dynamic particle waves reacting directly to microphone or audio track input.</p>
+          <div class="tags-list">
+            <span class="tag">Web Audio API</span>
+            <span class="tag">HTML5 Canvas</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
+          <a href="#" class="link-btn">Live Visualizer &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 6 -->
+      <article class="card" data-category="tooling">
+        <div class="card-top">
+          <div class="card-icon">📦</div>
+          <span class="card-badge">Developer Tools</span>
+        </div>
+        <div class="card-body">
+          <h3>MicroBundle Build Optimizer</h3>
+          <p>Lightweight bundler script with tree-shaking and zero-config asset hashing for static web applications and micro-frontends.</p>
+          <div class="tags-list">
+            <span class="tag">Node.js</span>
+            <span class="tag">ESBuild</span>
+            <span class="tag">NPM</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo</a>
+          <a href="#" class="link-btn">Release Notes &rarr;</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> Alex Morgan. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Interactive Category Filter Logic
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('#projects-grid .card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.classList.remove('project-card-hidden');
+          } else {
+            card.classList.add('project-card-hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
