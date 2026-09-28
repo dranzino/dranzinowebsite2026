@@ -1,2 +1,5 @@
 # dranzinowebsite2026
 This is the repository for a vibe-coded personal website created for ISDS 4125.
+The website can be found at https://dranzino.github.io/dranzinowebsite2026/ 
+
+While making this website, I was suprised at how robust the IDE and the AI coding assistant was. I enjoyed the process, however, and considered ways that I could try to make the project my own, and decided that a guestbook tab would be a fun way to get potential feedback. Knowing nothing about how to make or integrate that, I asked the antigravity AI to explain the general way it would function to me. By just asking, it explained how to use localStorage and would load and save entries using JSON. It also added things like emoji avatars and signatures, which I did not ask it to, but felt they were fun, so I kept it. Overall I felt that it was an insightful project that made me much more comfortable with the idea and process of vibe coding.
