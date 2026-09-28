@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign the Guestbook - Leave a friendly message, feedback, or greeting on Alex Morgan's personal website.">
+  <title>Guestbook | Alex Morgan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container site-nav">
+      <a href="index.html" class="brand-logo" id="brand-logo">
+        <span class="logo-symbol">AM</span>
+        <span>Alex Morgan</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" id="nav-home">Home</a></li>
+          <li><a href="project.html" id="nav-projects">Projects</a></li>
+          <li><a href="resume.html" id="nav-resume">Resume</a></li>
+          <li><a href="guestbook.html" class="active" id="nav-guestbook">Guestbook</a></li>
+        </ul>
+      </nav>
+      <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" style="padding-bottom: 2rem;">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span>
+        <span>Visitors Log</span>
+      </div>
+      <h1 class="hero-title">Sign the <span class="gradient-text">Guestbook</span></h1>
+      <p class="hero-subtitle">
+        Leave a note, shout-out, or quick feedback for other visitors. Drop your name and message below to leave your mark!
+      </p>
+    </section>
+
+    <!-- Info Banner -->
+    <div class="guest-info-banner">
+      <div style="font-size: 1.3rem;">💡</div>
+      <div>
+        <strong>Instant Live Signatures:</strong> Messages you submit appear immediately in the feed below and are saved locally. You can also connect free tools like <em>Giscus</em> or <em>Supabase</em> anytime to sync entries across visitors worldwide!
+      </div>
+    </div>
+
+    <!-- Guestbook Grid: Form & Feed -->
+    <div class="guestbook-grid">
+      <!-- Submission Form -->
+      <aside class="guestbook-form-card">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;">
+          Leave a Note
+        </h2>
+
+        <form id="guestbook-form">
+          <div class="form-group">
+            <label class="form-label" for="guest-name-input">
+              <span>Your Name or Handle</span>
+            </label>
+            <input 
+              type="text" 
+              id="guest-name-input" 
+              class="form-input" 
+              placeholder="e.g. Jordan Smith or @devjordan" 
+              maxlength="40" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">
+              <span>Pick an Avatar Icon</span>
+            </label>
+            <div class="avatar-selector" id="avatar-selector">
+              <button type="button" class="avatar-opt selected" data-avatar="🚀">🚀</button>
+              <button type="button" class="avatar-opt" data-avatar="💻">💻</button>
+              <button type="button" class="avatar-opt" data-avatar="☕">☕</button>
+              <button type="button" class="avatar-opt" data-avatar="✨">✨</button>
+              <button type="button" class="avatar-opt" data-avatar="🔥">🔥</button>
+              <button type="button" class="avatar-opt" data-avatar="👾">👾</button>
+              <button type="button" class="avatar-opt" data-avatar="👋">👋</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="guest-message-input">
+              <span>Your Message</span>
+              <span class="form-hint"><span id="char-count">0</span> / 280</span>
+            </label>
+            <textarea 
+              id="guest-message-input" 
+              class="form-textarea" 
+              placeholder="Write a greeting, advice, or feedback..." 
+              maxlength="280" 
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-guest-btn">
+            <span>Sign Guestbook</span>
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+            </svg>
+          </button>
+        </form>
+      </aside>
+
+      <!-- Messages Feed -->
+      <section>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+          <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">
+            Recent Signatures (<span id="total-signatures">0</span>)
+          </h2>
+          <button id="clear-local-btn" style="background: none; border: none; color: var(--text-dim); font-size: 0.8rem; cursor: pointer; text-decoration: underline;">
+            Reset to default
+          </button>
+        </div>
+
+        <div class="guest-feed" id="guest-feed">
+          <!-- Dynamically populated entries -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top: 5rem;">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; <span id="current-year">2026</span> Alex Morgan. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="project.html">Projects</a>
+        <a href="resume.html">Resume</a>
+        <a href="guestbook.html">Guestbook</a>
+        <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Default seed messages
+    const defaultEntries = [
+      {
+        id: "seed-1",
+        name: "Sarah Chen",
+        avatar: "🚀",
+        message: "Stumbled across your website from GitHub—love the sleek dark theme and project showcase. Keep up the great work!",
+        date: "Today at 2:15 PM"
+      },
+      {
+        id: "seed-2",
+        name: "Devon Miller",
+        avatar: "☕",
+        message: "Awesome portfolio layout! The design system is super clean and responsive. Wishing you the best on your upcoming projects.",
+        date: "Yesterday"
+      },
+      {
+        id: "seed-3",
+        name: "Elena Rostova",
+        avatar: "✨",
+        message: "Love the interactive projects filtering. Clean code and great attention to UI polish!",
+        date: "3 days ago"
+      }
+    ];
+
+    // Local Storage helpers
+    const STORAGE_KEY = 'portfolio_guestbook_entries_v1';
+
+    function loadEntries() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (!stored) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultEntries));
+        return defaultEntries;
+      }
+      try {
+        return JSON.parse(stored);
+      } catch (e) {
+        return defaultEntries;
+      }
+    }
+
+    function saveEntries(entries) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+    }
+
+    // Avatar Selection Logic
+    let selectedAvatar = "🚀";
+    const avatarBtns = document.querySelectorAll('.avatar-opt');
+    avatarBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        avatarBtns.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        selectedAvatar = btn.getAttribute('data-avatar');
+      });
+    });
+
+    // Character Counter
+    const messageInput = document.getElementById('guest-message-input');
+    const charCounter = document.getElementById('char-count');
+    messageInput.addEventListener('input', () => {
+      charCounter.textContent = messageInput.value.length;
+    });
+
+    // Render entries to feed
+    const feedContainer = document.getElementById('guest-feed');
+    const countDisplay = document.getElementById('total-signatures');
+
+    function renderFeed() {
+      const entries = loadEntries();
+      countDisplay.textContent = entries.length;
+      feedContainer.innerHTML = '';
+
+      entries.forEach(entry => {
+        const card = document.createElement('article');
+        card.className = 'guest-card';
+        card.innerHTML = `
+          <div class="guest-card-header">
+            <div class="guest-author">
+              <div class="guest-avatar-icon">${escapeHtml(entry.avatar || '👋')}</div>
+              <div>
+                <div class="guest-name">${escapeHtml(entry.name)}</div>
+                <div class="guest-date">${escapeHtml(entry.date)}</div>
+              </div>
+            </div>
+          </div>
+          <p class="guest-message">${escapeHtml(entry.message)}</p>
+        `;
+        feedContainer.appendChild(card);
+      });
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/[&<>'"]/g, 
+        tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+      );
+    }
+
+    // Handle Form Submit
+    const guestForm = document.getElementById('guestbook-form');
+    guestForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('guest-name-input').value.trim();
+      const message = messageInput.value.trim();
+
+      if (!name || !message) return;
+
+      const newEntry = {
+        id: 'entry-' + Date.now(),
+        name: name,
+        avatar: selectedAvatar,
+        message: message,
+        date: "Just now"
+      };
+
+      const currentEntries = loadEntries();
+      currentEntries.unshift(newEntry);
+      saveEntries(currentEntries);
+
+      // Re-render and clear form
+      renderFeed();
+      guestForm.reset();
+      charCounter.textContent = "0";
+
+      // Reset avatar selection
+      avatarBtns.forEach(b => b.classList.remove('selected'));
+      avatarBtns[0].classList.add('selected');
+      selectedAvatar = "🚀";
+    });
+
+    // Reset button
+    document.getElementById('clear-local-btn').addEventListener('click', () => {
+      if (confirm('Reset guestbook entries back to defaults?')) {
+        localStorage.removeItem(STORAGE_KEY);
+        renderFeed();
+      }
+    });
+
+    // Initial render
+    renderFeed();
+  </script>
+</body>
+</html>
