@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Projects Portfolio of Alex Morgan - Explore full-stack applications, developer tools, and user interface experiments.">
-  <title>Projects & Work | Alex Morgan</title>
+  <meta name="description" content="Projects Portfolio of Daniel Ranzino - Hardware builds, operations automation, network systems onboarding, and vibe-coding projects.">
+  <title>Projects &amp; Builds | Daniel Ranzino</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Filter Tabs Styling */
@@ -45,8 +45,8 @@
   <header class="site-header">
     <div class="container site-nav">
       <a href="index.html" class="brand-logo" id="brand-logo">
-        <span class="logo-symbol">AM</span>
-        <span>Alex Morgan</span>
+        <span class="logo-symbol">DR</span>
+        <span>Daniel Ranzino</span>
       </a>
       <nav aria-label="Main Navigation">
         <ul class="nav-links">
@@ -70,154 +70,148 @@
     <!-- Projects Hero Header -->
     <section class="hero" style="padding-bottom: 2rem;">
       <div class="hero-badge">
-        <span>Portfolio Showcase</span>
+        <span>Portfolio &amp; Experience Highlights</span>
       </div>
-      <h1 class="hero-title">Selected <span class="gradient-text">Projects &amp; Builds</span></h1>
+      <h1 class="hero-title">Technical <span class="gradient-text">Projects &amp; Systems</span></h1>
       <p class="hero-subtitle">
-        A curated showcase of applications, developer tools, and client platforms I have created. Explore the source repositories and interactive demonstrations.
+        Hands-on systems builds, automation scripts, and technical implementations derived from my professional internships, academic work at LSU, and personal engineering projects.
       </p>
     </section>
 
     <!-- Project Filter Buttons -->
     <div class="filter-tabs" role="tablist" aria-label="Filter projects">
       <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-      <button class="filter-btn" data-filter="frontend">Frontend / UI</button>
-      <button class="filter-btn" data-filter="tooling">Developer Tools</button>
+      <button class="filter-btn" data-filter="hardware">Hardware &amp; Systems</button>
+      <button class="filter-btn" data-filter="automation">Automation &amp; Code</button>
+      <button class="filter-btn" data-filter="operations">Operations &amp; Security</button>
     </div>
 
     <!-- Projects Grid -->
     <section class="card-grid" id="projects-grid">
-      <!-- Project 1 -->
-      <article class="card" data-category="fullstack">
+      <!-- Project 1: Personal Computer Build -->
+      <article class="card" data-category="hardware">
         <div class="card-top">
-          <div class="card-icon">📊</div>
-          <span class="card-badge">Full Stack</span>
+          <div class="card-icon">🖥️</div>
+          <span class="card-badge">Hardware &amp; Systems</span>
         </div>
         <div class="card-body">
-          <h3>CloudPulse Analytics</h3>
-          <p>Real-time distributed telemetry and observability platform with customizable dashboard widgets, alerting thresholds, and PostgreSQL aggregation.</p>
+          <h3>Personal Computer Build &amp; Maintenance</h3>
+          <p>Sourced, assembled, and currently maintaining a personal workstation computer. Configured component architecture, BIOS/UEFI settings, thermal management, and reliable everyday operation.</p>
           <div class="tags-list">
-            <span class="tag">TypeScript</span>
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">PostgreSQL</span>
+            <span class="tag">PC Assembly</span>
+            <span class="tag">Hardware</span>
+            <span class="tag">System Config</span>
+            <span class="tag">Troubleshooting</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-            Code
-          </a>
-          <a href="#" class="link-btn">Live Preview &rarr;</a>
+          <a href="resume.html#projects-section" class="link-btn">View on Resume &rarr;</a>
         </div>
       </article>
 
-      <!-- Project 2 -->
-      <article class="card" data-category="frontend">
+      <!-- Project 2: Repair Ticket Automation -->
+      <article class="card" data-category="automation">
         <div class="card-top">
-          <div class="card-icon">⚡</div>
-          <span class="card-badge">Frontend / UI</span>
+          <div class="card-icon">⚙️</div>
+          <span class="card-badge">Automation &amp; Code</span>
         </div>
         <div class="card-body">
-          <h3>DesignCraft Component Kit</h3>
-          <p>An accessible, production-ready component library built with pure CSS and vanilla JavaScript. Features dark mode, fluid responsiveness, and keyboard accessibility.</p>
-          <div class="tags-list">
-            <span class="tag">HTML5</span>
-            <span class="tag">Modern CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">A11y</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
-          <a href="#" class="link-btn">Documentation &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 3 -->
-      <article class="card" data-category="tooling">
-        <div class="card-top">
-          <div class="card-icon">🛠️</div>
-          <span class="card-badge">Developer Tools</span>
-        </div>
-        <div class="card-body">
-          <h3>SyntaxAI Code Reviewer</h3>
-          <p>Command line interface that scans Git commits for code smells, security vulnerabilities, and formatting consistency using automated LLM checks.</p>
+          <h3>Repair Ticket Status Automation Script</h3>
+          <p>Assisted the IT manager at NOLA Education by developing a custom script to automatically compile and update statuses of computer repair tickets, streamlining service turnaround times.</p>
           <div class="tags-list">
             <span class="tag">Python</span>
-            <span class="tag">CLI</span>
-            <span class="tag">OpenAI API</span>
-            <span class="tag">Git Hooks</span>
+            <span class="tag">IT Scripting</span>
+            <span class="tag">Ticketing Automation</span>
+            <span class="tag">Workflow</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo</a>
-          <a href="#" class="link-btn">PyPI Package &rarr;</a>
+          <a href="resume.html#experience-section" class="link-btn">Read in Experience &rarr;</a>
         </div>
       </article>
 
-      <!-- Project 4 -->
-      <article class="card" data-category="fullstack">
+      <!-- Project 3: Vibe-Coding Personal Portfolio -->
+      <article class="card" data-category="automation">
         <div class="card-top">
-          <div class="card-icon">🛒</div>
-          <span class="card-badge">Full Stack</span>
+          <div class="card-icon">🌐</div>
+          <span class="card-badge">Web &amp; Vibe-Coding</span>
         </div>
         <div class="card-body">
-          <h3>Aura E-Commerce Engine</h3>
-          <p>Headless commerce storefront integrated with Stripe payments, cart state persistence, dynamic product inventory, and instant search indexing.</p>
+          <h3>Vibe-Coded Website &amp; Interactive Guestbook</h3>
+          <p>Multi-page personal website built to showcase understanding of vibe-coding, responsive CSS design systems, and an interactive visitor guestbook with local persistence.</p>
           <div class="tags-list">
-            <span class="tag">Next.js</span>
-            <span class="tag">Stripe API</span>
-            <span class="tag">Tailwind</span>
-            <span class="tag">Redis</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
-          <a href="#" class="link-btn">Storefront &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 5 -->
-      <article class="card" data-category="frontend">
-        <div class="card-top">
-          <div class="card-icon">🎵</div>
-          <span class="card-badge">Frontend / UI</span>
-        </div>
-        <div class="card-body">
-          <h3>SonicWave Audio Visualizer</h3>
-          <p>Interactive web audio visualizer built using Web Audio API and HTML5 Canvas. Renders dynamic particle waves reacting directly to microphone or audio track input.</p>
-          <div class="tags-list">
-            <span class="tag">Web Audio API</span>
-            <span class="tag">HTML5 Canvas</span>
+            <span class="tag">HTML5</span>
+            <span class="tag">Vanilla CSS</span>
             <span class="tag">JavaScript</span>
+            <span class="tag">GitHub Pages</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">Code</a>
-          <a href="#" class="link-btn">Live Visualizer &rarr;</a>
+          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo &rarr;</a>
+          <a href="guestbook.html" class="link-btn">Try Guestbook &rarr;</a>
         </div>
       </article>
 
-      <!-- Project 6 -->
-      <article class="card" data-category="tooling">
+      <!-- Project 4: 20+ Schools Systems Deployment -->
+      <article class="card" data-category="operations">
         <div class="card-top">
-          <div class="card-icon">📦</div>
-          <span class="card-badge">Developer Tools</span>
+          <div class="card-icon">🏫</div>
+          <span class="card-badge">Operations &amp; Security</span>
         </div>
         <div class="card-body">
-          <h3>MicroBundle Build Optimizer</h3>
-          <p>Lightweight bundler script with tree-shaking and zero-config asset hashing for static web applications and micro-frontends.</p>
+          <h3>Classroom Computer Deployment (20+ Schools)</h3>
+          <p>Assembled and inventoried desktop computers in classrooms across 20+ schools. Performed systems setup, installed third-party educational software, and collaborated with district IT staff for network onboarding.</p>
           <div class="tags-list">
-            <span class="tag">Node.js</span>
-            <span class="tag">ESBuild</span>
-            <span class="tag">NPM</span>
+            <span class="tag">Network Onboarding</span>
+            <span class="tag">System Setup</span>
+            <span class="tag">Inventory</span>
+            <span class="tag">NOLA Education</span>
           </div>
         </div>
         <div class="card-actions">
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo</a>
-          <a href="#" class="link-btn">Release Notes &rarr;</a>
+          <a href="resume.html#experience-section" class="link-btn">Internship Details &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 5: Curriculum Software QA -->
+      <article class="card" data-category="operations">
+        <div class="card-top">
+          <div class="card-icon">🔍</div>
+          <span class="card-badge">Operations &amp; Security</span>
+        </div>
+        <div class="card-body">
+          <h3>Curriculum Software QA &amp; Bug Testing</h3>
+          <p>Conducted systematic quality assurance and bug testing on educational curriculum software to ensure bug-free deployment across multi-district school environments.</p>
+          <div class="tags-list">
+            <span class="tag">QA Testing</span>
+            <span class="tag">Bug Tracking</span>
+            <span class="tag">Educational Software</span>
+            <span class="tag">Staging</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="resume.html#experience-section" class="link-btn">View Details &rarr;</a>
+        </div>
+      </article>
+
+      <!-- Project 6: Cyber Risk & Networking Coursework -->
+      <article class="card" data-category="hardware">
+        <div class="card-top">
+          <div class="card-icon">🛡️</div>
+          <span class="card-badge">Hardware &amp; Systems</span>
+        </div>
+        <div class="card-body">
+          <h3>Cyber Risk &amp; Information Systems Analysis</h3>
+          <p>Coursework in LSU Information Systems &amp; Analytics covering Cyber Risk Management, Information Systems Analysis and Design, and Computer Networking &amp; Security.</p>
+          <div class="tags-list">
+            <span class="tag">Risk Management</span>
+            <span class="tag">Networking</span>
+            <span class="tag">Security</span>
+            <span class="tag">LSU ISA</span>
+          </div>
+        </div>
+        <div class="card-actions">
+          <a href="resume.html#education-section" class="link-btn">Academic Background &rarr;</a>
         </div>
       </article>
     </section>
@@ -227,7 +221,7 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <div class="footer-copy">
-        &copy; <span id="current-year">2026</span> Alex Morgan. All rights reserved.
+        &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
       </div>
       <div class="footer-links">
         <a href="index.html">Home</a>
