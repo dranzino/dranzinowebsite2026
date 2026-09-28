@@ -8,146 +8,178 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container site-nav">
-      <a href="index.html" class="brand-logo" id="brand-logo">
-        <span class="logo-symbol">DR</span>
-        <span>Daniel Ranzino</span>
-      </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" id="nav-home">Home</a></li>
-          <li><a href="project.html" id="nav-projects">Projects</a></li>
-          <li><a href="resume.html" id="nav-resume">Resume</a></li>
-          <li><a href="guestbook.html" class="active" id="nav-guestbook">Guestbook</a></li>
-        </ul>
-      </nav>
-      <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Hero Section -->
-    <section class="hero" style="padding-bottom: 2rem;">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        <span>Visitors Log</span>
-      </div>
-      <h1 class="hero-title">Sign the <span class="gradient-text">Guestbook</span></h1>
-      <p class="hero-subtitle">
-        Leave a note, shout-out, or quick feedback for other visitors. Drop your name and message below to leave your mark!
-      </p>
-    </section>
-
-    <!-- Info Banner -->
-    <div class="guest-info-banner">
-      <div style="font-size: 1.3rem;">💡</div>
-      <div>
-        <strong>Instant Live Signatures:</strong> Messages you submit appear immediately in the feed below and are saved locally. You can also connect free tools like <em>Giscus</em> or <em>Supabase</em> anytime to sync entries across visitors worldwide!
-      </div>
-    </div>
-
-    <!-- Guestbook Grid: Form & Feed -->
-    <div class="guestbook-grid">
-      <!-- Submission Form -->
-      <aside class="guestbook-form-card">
-        <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;">
-          Leave a Note
-        </h2>
-
-        <form id="guestbook-form">
-          <div class="form-group">
-            <label class="form-label" for="guest-name-input">
-              <span>Your Name or Handle</span>
-            </label>
-            <input 
-              type="text" 
-              id="guest-name-input" 
-              class="form-input" 
-              placeholder="e.g. Jordan Smith or @devjordan" 
-              maxlength="40" 
-              required
-            >
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">
-              <span>Pick an Avatar Icon</span>
-            </label>
-            <div class="avatar-selector" id="avatar-selector">
-              <button type="button" class="avatar-opt selected" data-avatar="🚀">🚀</button>
-              <button type="button" class="avatar-opt" data-avatar="💻">💻</button>
-              <button type="button" class="avatar-opt" data-avatar="☕">☕</button>
-              <button type="button" class="avatar-opt" data-avatar="✨">✨</button>
-              <button type="button" class="avatar-opt" data-avatar="🔥">🔥</button>
-              <button type="button" class="avatar-opt" data-avatar="👾">👾</button>
-              <button type="button" class="avatar-opt" data-avatar="👋">👋</button>
+  <div class="app-layout">
+    <!-- Enclosed Left-Hand Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <a href="index.html" class="brand-logo" id="brand-logo">
+            <span class="logo-symbol">DR</span>
+            <div class="brand-text">
+              <span class="brand-name">Daniel Ranzino</span>
+              <span class="brand-sub">LSU &bull; Info Systems</span>
             </div>
-          </div>
+          </a>
 
-          <div class="form-group">
-            <label class="form-label" for="guest-message-input">
-              <span>Your Message</span>
-              <span class="form-hint"><span id="char-count">0</span> / 280</span>
-            </label>
-            <textarea 
-              id="guest-message-input" 
-              class="form-textarea" 
-              placeholder="Write a greeting, advice, or feedback..." 
-              maxlength="280" 
-              required
-            ></textarea>
+          <div class="nav-section">
+            <span class="nav-section-title">Navigation</span>
+            <nav aria-label="Main Navigation" class="sidebar-nav">
+              <ul class="nav-links">
+                <li>
+                  <a href="index.html" id="nav-home">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="project.html" id="nav-projects">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span>Projects</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="resume.html" id="nav-resume">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Resume</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="guestbook.html" class="active" id="nav-guestbook">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    <span>Guestbook</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
+        </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-guest-btn">
-            <span>Sign Guestbook</span>
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+        <div class="sidebar-footer">
+          <div class="sidebar-status">
+            <span class="pulse-dot"></span>
+            <span>Open to Opportunities</span>
+          </div>
+          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
-          </button>
-        </form>
-      </aside>
-
-      <!-- Messages Feed -->
-      <section>
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
-          <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">
-            Recent Signatures (<span id="total-signatures">0</span>)
-          </h2>
-          <button id="clear-local-btn" style="background: none; border: none; color: var(--text-dim); font-size: 0.8rem; cursor: pointer; text-decoration: underline;">
-            Reset to default
-          </button>
+            <span>GitHub</span>
+          </a>
         </div>
+      </div>
+    </aside>
 
-        <div class="guest-feed" id="guest-feed">
-          <!-- Dynamically populated entries -->
+    <!-- Main Content Column -->
+    <div class="app-content">
+      <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Visitors Log</span>
+          </div>
+          <h1 class="hero-title">Sign the <span class="gradient-text">Guestbook</span></h1>
+          <p class="hero-subtitle">
+            Leave a note, shout-out, or quick feedback for other visitors. Drop your name and message below to leave your mark!
+          </p>
+        </section>
+
+        <!-- Guestbook Grid: Form & Feed -->
+        <div class="guestbook-grid">
+          <!-- Submission Form -->
+          <aside class="guestbook-form-card">
+            <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem;">
+              Leave a Note
+            </h2>
+
+            <form id="guestbook-form">
+              <div class="form-group">
+                <label class="form-label" for="guest-name-input">
+                  <span>Your Name or Handle</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="guest-name-input" 
+                  class="form-input" 
+                  placeholder="e.g. Jordan Smith or @devjordan" 
+                  maxlength="40" 
+                  required
+                >
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">
+                  <span>Pick an Avatar Icon</span>
+                </label>
+                <div class="avatar-selector" id="avatar-selector">
+                  <button type="button" class="avatar-opt selected" data-avatar="🚀">🚀</button>
+                  <button type="button" class="avatar-opt" data-avatar="💻">💻</button>
+                  <button type="button" class="avatar-opt" data-avatar="☕">☕</button>
+                  <button type="button" class="avatar-opt" data-avatar="✨">✨</button>
+                  <button type="button" class="avatar-opt" data-avatar="🔥">🔥</button>
+                  <button type="button" class="avatar-opt" data-avatar="👾">👾</button>
+                  <button type="button" class="avatar-opt" data-avatar="👋">👋</button>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="guest-message-input">
+                  <span>Your Message</span>
+                  <span class="form-hint"><span id="char-count">0</span> / 280</span>
+                </label>
+                <textarea 
+                  id="guest-message-input" 
+                  class="form-textarea" 
+                  placeholder="Write a greeting, advice, or feedback..." 
+                  maxlength="280" 
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;" id="submit-guest-btn">
+                <span>Sign Guestbook</span>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+              </button>
+            </form>
+          </aside>
+
+          <!-- Messages Feed -->
+          <section>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+              <h2 style="font-size: 1.25rem; font-weight: 700; color: #fff;">
+                Recent Signatures (<span id="total-signatures">0</span>)
+              </h2>
+              <button id="clear-local-btn" style="background: none; border: none; color: var(--text-dim); font-size: 0.8rem; cursor: pointer; text-decoration: underline;">
+                Reset to default
+              </button>
+            </div>
+
+            <div class="guest-feed" id="guest-feed">
+              <!-- Dynamically populated entries -->
+            </div>
+          </section>
         </div>
-      </section>
-    </div>
-  </main>
+      </main>
 
-  <!-- Footer -->
-  <footer class="site-footer" style="margin-top: 5rem;">
-    <div class="container footer-content">
-      <div class="footer-copy">
-        &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="guestbook.html">Guestbook</a>
-        <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+      <!-- Footer -->
+      <footer class="site-footer" style="margin-top: 5rem;">
+        <div class="container footer-content">
+          <div class="footer-copy">
+            &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </div>
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();

@@ -21,7 +21,7 @@
       gap: 0.45rem;
     }
     .contact-item a {
-      color: #a5b4fc;
+      color: var(--primary);
     }
     .contact-item a:hover {
       text-decoration: underline;
@@ -30,261 +30,301 @@
   </style>
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container site-nav">
-      <a href="index.html" class="brand-logo" id="brand-logo">
-        <span class="logo-symbol">DR</span>
-        <span>Daniel Ranzino</span>
-      </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" id="nav-home">Home</a></li>
-          <li><a href="project.html" id="nav-projects">Projects</a></li>
-          <li><a href="resume.html" class="active" id="nav-resume">Resume</a></li>
-          <li><a href="guestbook.html" id="nav-guestbook">Guestbook</a></li>
-        </ul>
-      </nav>
-      <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Page Intro -->
-    <section class="hero" style="padding-bottom: 2rem;">
-      <div class="hero-badge">
-        <span>Curriculum Vitae</span>
-      </div>
-      <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; flex-wrap: wrap; gap: 1.5rem;">
-        <div>
-          <h1 class="hero-title" style="margin-bottom: 0.5rem;">Daniel <span class="gradient-text">Ranzino</span></h1>
-          <p class="hero-subtitle">Senior at Louisiana State University majoring in Information Systems and Analytics with experience in IT operations, systems setup, and technical troubleshooting.</p>
-          <div class="contact-bar">
-            <span class="contact-item">📍 Baton Rouge, LA</span>
-            <span class="contact-item">📞 <a href="tel:2253852547">(225) 385-2547</a></span>
-            <span class="contact-item">✉️ <a href="mailto:danielranzino00@gmail.com">danielranzino00@gmail.com</a></span>
-          </div>
-        </div>
-        <div class="resume-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-          <a href="Daniel_Ranzino_Resume.pdf" target="_blank" class="btn btn-primary" id="download-pdf-btn">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            <span>Original PDF</span>
+  <div class="app-layout">
+    <!-- Enclosed Left-Hand Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <a href="index.html" class="brand-logo" id="brand-logo">
+            <span class="logo-symbol">DR</span>
+            <div class="brand-text">
+              <span class="brand-name">Daniel Ranzino</span>
+              <span class="brand-sub">LSU &bull; Info Systems</span>
+            </div>
           </a>
-          <button onclick="window.print()" class="btn btn-secondary" id="print-resume-btn">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
-            <span>Print / Save PDF</span>
-          </button>
+
+          <div class="nav-section">
+            <span class="nav-section-title">Navigation</span>
+            <nav aria-label="Main Navigation" class="sidebar-nav">
+              <ul class="nav-links">
+                <li>
+                  <a href="index.html" id="nav-home">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="project.html" id="nav-projects">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span>Projects</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="resume.html" class="active" id="nav-resume">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Resume</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="guestbook.html" id="nav-guestbook">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    <span>Guestbook</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-status">
+            <span class="pulse-dot"></span>
+            <span>Open to Opportunities</span>
+          </div>
+          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
         </div>
       </div>
-    </section>
+    </aside>
 
-    <!-- Education Section -->
-    <section class="section" id="education-section">
-      <div class="section-header">
-        <span class="section-tag">Academic Background</span>
-        <h2>Education</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-header">
+    <!-- Main Content Column -->
+    <div class="app-content">
+      <main class="container">
+        <!-- Page Intro -->
+        <section class="hero">
+          <div class="hero-badge">
+            <span>Curriculum Vitae</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-end; width: 100%; flex-wrap: wrap; gap: 1.5rem;">
             <div>
-              <h3 class="timeline-role">Bachelors in Information Systems and Analytics</h3>
-              <span class="timeline-company">Louisiana State University (LSU), Baton Rouge, LA</span>
+              <h1 class="hero-title" style="margin-bottom: 0.5rem;">Daniel <span class="gradient-text">Ranzino</span></h1>
+              <p class="hero-subtitle">Senior at Louisiana State University majoring in Information Systems and Analytics with experience in IT operations, systems setup, and technical troubleshooting.</p>
+              <div class="contact-bar">
+                <span class="contact-item">📍 Baton Rouge, LA</span>
+                <span class="contact-item">📞 <a href="tel:2253852547">(225) 385-2547</a></span>
+                <span class="contact-item">✉️ <a href="mailto:danielranzino00@gmail.com">danielranzino00@gmail.com</a></span>
+              </div>
             </div>
-            <span class="timeline-period">Graduation: December 2026 &bull; GPA: 3.08</span>
-          </div>
-          <div class="timeline-desc">
-            <p><strong>Related Coursework:</strong> Cyber Risk Management, Analysis and Design of Information Systems, Computer Networking and Security.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Professional Experience Timeline -->
-    <section class="section" id="experience-section">
-      <div class="section-header">
-        <span class="section-tag">Work Experience</span>
-        <h2>Professional Roles</h2>
-      </div>
-
-      <div class="timeline">
-        <!-- Operations Intern -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Operations Intern</h3>
-              <span class="timeline-company">NOLA Education &mdash; New Orleans, LA</span>
-            </div>
-            <span class="timeline-period">May 2025 &ndash; Aug 2025 &bull; May 2026 &ndash; Aug 2026</span>
-          </div>
-          <div class="timeline-desc">
-            <ul>
-              <li>Supported operations managers by coordinating with a cohort of interns to set up classrooms.</li>
-              <li>Assembled and inventoried desktop computers in classrooms across 20+ schools.</li>
-              <li>Provided bug testing and quality assurance tasks on curriculum software.</li>
-              <li>Performed systems setup and installed third-party educational software for curriculum onto computers.</li>
-              <li>Assisted IT manager by developing a script to compile and update status of computer repair tickets.</li>
-              <li>Collaborated with school district IT staff to onboard computer systems to their respective network.</li>
-              <li>Unboxed and constructed specialty curriculum for dynamic staging on student workspaces.</li>
-              <li>Off-loaded and unpacked heavy pallets of boxes and materials for establishing school sites.</li>
-              <li>Travelled in team setting to various schools in the south US region to contracted school sites.</li>
-              <li>Directed tasks among fellow interns in a time-sensitive environment for punctual completion.</li>
-              <li>Maintained professional courtesy to field questions and concerns from both teachers and students.</li>
-            </ul>
-            <div class="tags-list">
-              <span class="tag">IT Operations</span>
-              <span class="tag">Desktop Assembly</span>
-              <span class="tag">Network Onboarding</span>
-              <span class="tag">Automation Scripting</span>
-              <span class="tag">QA Bug Testing</span>
-              <span class="tag">Team Leadership</span>
+            <div class="resume-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+              <a href="Daniel_Ranzino_Resume.pdf" target="_blank" class="btn btn-primary" id="download-pdf-btn">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Original PDF</span>
+              </a>
+              <button onclick="window.print()" class="btn btn-secondary" id="print-resume-btn">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                <span>Print / Save PDF</span>
+              </button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="section" id="projects-section">
-      <div class="section-header">
-        <span class="section-tag">Technical Projects</span>
-        <h2>Projects &amp; Builds</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Personal Computer Build &amp; Maintenance</h3>
-              <span class="timeline-company">Custom Hardware System</span>
-            </div>
-            <span class="timeline-period">Ongoing</span>
+        <!-- Education Section -->
+        <section class="section" id="education-section">
+          <div class="section-header">
+            <span class="section-tag">Academic Background</span>
+            <h2>Education</h2>
           </div>
-          <div class="timeline-desc">
-            <p>Sourced, built, and currently maintaining a personal computer workstation tailored for systems development, analytics, and everyday technical tasks.</p>
-            <div class="tags-list">
-              <span class="tag">PC Hardware</span>
-              <span class="tag">Architecture</span>
-              <span class="tag">System Tuning</span>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Bachelors in Information Systems and Analytics</h3>
+                  <span class="timeline-company">Louisiana State University (LSU), Baton Rouge, LA</span>
+                </div>
+                <span class="timeline-period">Graduation: December 2026 &bull; GPA: 3.08</span>
+              </div>
+              <div class="timeline-desc">
+                <p><strong>Related Coursework:</strong> Cyber Risk Management, Analysis and Design of Information Systems, Computer Networking and Security.</p>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-header">
-            <div>
-              <h3 class="timeline-role">Personal Website &amp; Interactive Guestbook</h3>
-              <span class="timeline-company">Vibe-Coding Project</span>
+        <!-- Professional Experience Timeline -->
+        <section class="section" id="experience-section">
+          <div class="section-header">
+            <span class="section-tag">Work Experience</span>
+            <h2>Professional Roles</h2>
+          </div>
+
+          <div class="timeline">
+            <!-- Operations Intern -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Operations Intern</h3>
+                  <span class="timeline-company">NOLA Education &mdash; New Orleans, LA</span>
+                </div>
+                <span class="timeline-period">May 2025 &ndash; Aug 2025 &bull; May 2026 &ndash; Aug 2026</span>
+              </div>
+              <div class="timeline-desc">
+                <ul>
+                  <li>Supported operations managers by coordinating with a cohort of interns to set up classrooms.</li>
+                  <li>Assembled and inventoried desktop computers in classrooms across 20+ schools.</li>
+                  <li>Provided bug testing and quality assurance tasks on curriculum software.</li>
+                  <li>Performed systems setup and installed third-party educational software for curriculum onto computers.</li>
+                  <li>Assisted IT manager by developing a script to compile and update status of computer repair tickets.</li>
+                  <li>Collaborated with school district IT staff to onboard computer systems to their respective network.</li>
+                  <li>Unboxed and constructed specialty curriculum for dynamic staging on student workspaces.</li>
+                  <li>Off-loaded and unpacked heavy pallets of boxes and materials for establishing school sites.</li>
+                  <li>Travelled in team setting to various schools in the south US region to contracted school sites.</li>
+                  <li>Directed tasks among fellow interns in a time-sensitive environment for punctual completion.</li>
+                  <li>Maintained professional courtesy to field questions and concerns from both teachers and students.</li>
+                </ul>
+                <div class="tags-list">
+                  <span class="tag">IT Operations</span>
+                  <span class="tag">Desktop Assembly</span>
+                  <span class="tag">Network Onboarding</span>
+                  <span class="tag">Automation Scripting</span>
+                  <span class="tag">QA Bug Testing</span>
+                  <span class="tag">Team Leadership</span>
+                </div>
+              </div>
             </div>
-            <span class="timeline-period">2026</span>
           </div>
-          <div class="timeline-desc">
-            <p>Multi-page personal portfolio and guestbook platform built with HTML5, CSS3, and JavaScript, hosted via GitHub Pages with integrated Git workflow.</p>
-            <div class="tags-list">
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Git &amp; GitHub</span>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section" id="projects-section">
+          <div class="section-header">
+            <span class="section-tag">Technical Projects</span>
+            <h2>Projects &amp; Builds</h2>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Personal Computer Build &amp; Maintenance</h3>
+                  <span class="timeline-company">Custom Hardware System</span>
+                </div>
+                <span class="timeline-period">Ongoing</span>
+              </div>
+              <div class="timeline-desc">
+                <p>Sourced, built, and currently maintaining a personal computer workstation tailored for systems development, analytics, and everyday technical tasks.</p>
+                <div class="tags-list">
+                  <span class="tag">PC Hardware</span>
+                  <span class="tag">Architecture</span>
+                  <span class="tag">System Tuning</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Personal Website &amp; Interactive Guestbook</h3>
+                  <span class="timeline-company">Vibe-Coding Project</span>
+                </div>
+                <span class="timeline-period">2026</span>
+              </div>
+              <div class="timeline-desc">
+                <p>Multi-page personal portfolio and guestbook platform built with HTML5, CSS3, and JavaScript, hosted via GitHub Pages with integrated Git workflow.</p>
+                <div class="tags-list">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Git &amp; GitHub</span>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Technical Skills Matrix -->
-    <section class="section" id="skills-section">
-      <div class="section-header">
-        <span class="section-tag">Capabilities</span>
-        <h2>Skills &amp; Certifications</h2>
-        <p>Technical knowledge, software tools, and active professional certifications.</p>
-      </div>
+        <!-- Technical Skills Matrix -->
+        <section class="section" id="skills-section">
+          <div class="section-header">
+            <span class="section-tag">Capabilities</span>
+            <h2>Skills &amp; Certifications</h2>
+            <p>Technical knowledge, software tools, and active professional certifications.</p>
+          </div>
 
-      <div class="skills-container">
-        <div class="skills-group">
-          <h3>
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
-            Programming &amp; Data
-          </h3>
-          <div class="tags-list">
-            <span class="tag">SQL</span>
-            <span class="tag">Python</span>
-            <span class="tag">HTML5 / CSS</span>
-            <span class="tag">Shell Scripting</span>
+          <div class="skills-container">
+            <div class="skills-group">
+              <h3>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                Programming &amp; Data
+              </h3>
+              <div class="tags-list">
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">HTML5 / CSS</span>
+                <span class="tag">Shell Scripting</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h3>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Software &amp; Productivity
+              </h3>
+              <div class="tags-list">
+                <span class="tag">Adobe Photoshop</span>
+                <span class="tag">Microsoft Excel / Office</span>
+                <span class="tag">Software QA &amp; Bug Testing</span>
+                <span class="tag">Systems Setup</span>
+              </div>
+            </div>
+
+            <div class="skills-group">
+              <h3>
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                Certifications (Pursuing)
+              </h3>
+              <div class="tags-list">
+                <span class="tag">CompTIA Network+</span>
+                <span class="tag">CISA (Certified Information Systems Auditor)</span>
+                <span class="tag">CISSP (Certified Information Systems Security Professional)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Activities & Memberships -->
+        <section class="section" id="activities-section">
+          <div class="section-header">
+            <span class="section-tag">Campus Engagement</span>
+            <h2>Activities &amp; Affiliations</h2>
+          </div>
+
+          <div class="card" style="padding: 1.5rem 2rem;">
+            <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.35rem;">
+              Association of Information Technology Professionals (AITP)
+            </h3>
+            <p style="color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">LSU Chapter &bull; Member</p>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Active member participating in professional development, technology workshops, and industry networking events.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-copy">
+            &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Baton Rouge, LA.
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </div>
-
-        <div class="skills-group">
-          <h3>
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            Software &amp; Productivity
-          </h3>
-          <div class="tags-list">
-            <span class="tag">Adobe Photoshop</span>
-            <span class="tag">Microsoft Excel / Office</span>
-            <span class="tag">Software QA &amp; Bug Testing</span>
-            <span class="tag">Systems Setup</span>
-          </div>
-        </div>
-
-        <div class="skills-group">
-          <h3>
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-            Certifications (Pursuing)
-          </h3>
-          <div class="tags-list">
-            <span class="tag">CompTIA Network+</span>
-            <span class="tag">CISA (Certified Information Systems Auditor)</span>
-            <span class="tag">CISSP (Certified Information Systems Security Professional)</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Activities & Memberships -->
-    <section class="section" id="activities-section">
-      <div class="section-header">
-        <span class="section-tag">Campus Engagement</span>
-        <h2>Activities &amp; Affiliations</h2>
-      </div>
-
-      <div class="card" style="padding: 1.5rem 2rem;">
-        <h3 style="color: #fff; font-size: 1.15rem; margin-bottom: 0.35rem;">
-          Association of Information Technology Professionals (AITP)
-        </h3>
-        <p style="color: var(--secondary); font-weight: 600; margin-bottom: 0.5rem;">LSU Chapter &bull; Member</p>
-        <p style="color: var(--text-muted); font-size: 0.95rem;">
-          Active member participating in professional development, technology workshops, and industry networking events.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-copy">
-        &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Baton Rouge, LA.
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="guestbook.html">Guestbook</a>
-        <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+      </footer>
     </div>
-  </footer>
+  </div>
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();

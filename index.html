@@ -8,186 +8,409 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container site-nav">
-      <a href="index.html" class="brand-logo" id="brand-logo">
-        <span class="logo-symbol">DR</span>
-        <span>Daniel Ranzino</span>
-      </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active" id="nav-home">Home</a></li>
-          <li><a href="project.html" id="nav-projects">Projects</a></li>
-          <li><a href="resume.html" id="nav-resume">Resume</a></li>
-          <li><a href="guestbook.html" id="nav-guestbook">Guestbook</a></li>
-        </ul>
-      </nav>
-      <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Hero Section -->
-    <section class="hero" id="hero-section">
-      <div class="hero-badge">
-        <span class="pulse-dot"></span>
-        <span>LSU Senior &bull; Graduating Dec 2026</span>
-      </div>
-      <h1 class="hero-title">
-        Daniel Ranzino &mdash; <span class="gradient-text">Information Systems &amp; Analytics</span>
-      </h1>
-      <p class="hero-subtitle">
-        I am Daniel Ranzino, a senior at Louisiana State University. This is a sample website to showcase my understanding of vibe-coding, and a bit of personal information such as my resume. Please sign the guestbook and let me know what you think!
-      </p>
-      <div class="hero-cta">
-        <a href="resume.html" class="btn btn-primary" id="hero-cta-resume">
-          <span>View Resume</span>
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-        </a>
-        <a href="project.html" class="btn btn-secondary" id="hero-cta-projects">
-          <span>Explore Projects</span>
-        </a>
-        <a href="guestbook.html" class="btn btn-secondary" id="hero-cta-guestbook">
-          <span>✍️ Sign Guestbook</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Highlights / Key Metrics -->
-    <section class="stats-grid" id="stats-section">
-      <div class="stat-card">
-        <div class="stat-num">LSU</div>
-        <div class="stat-desc">Senior &bull; Info Systems &amp; Analytics</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">3.08</div>
-        <div class="stat-desc">Cumulative GPA</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">20+</div>
-        <div class="stat-desc">Schools Classroom Systems Setup</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">AITP</div>
-        <div class="stat-desc">LSU Member &bull; Tech Community</div>
-      </div>
-    </section>
-
-    <!-- Featured Projects Preview -->
-    <section class="section" id="featured-projects">
-      <div class="section-header">
-        <span class="section-tag">Featured Work &amp; Experience</span>
-        <h2>Key Highlights</h2>
-        <p>A look at my hands-on hardware builds, operations scripting, and vibe-coding projects.</p>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-top">
-            <div class="card-icon">🖥️</div>
-            <span class="card-badge">Hardware &amp; Systems</span>
-          </div>
-          <div class="card-body">
-            <h3>Custom PC Build &amp; Workstation</h3>
-            <p>Sourced, engineered, built, and actively maintaining a high-performance personal computer workstation tailored for systems development, analytics, and multitasking.</p>
-            <div class="tags-list">
-              <span class="tag">Hardware</span>
-              <span class="tag">System Config</span>
-              <span class="tag">Maintenance</span>
+  <div class="app-layout">
+    <!-- Enclosed Left-Hand Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <a href="index.html" class="brand-logo" id="brand-logo">
+            <span class="logo-symbol">DR</span>
+            <div class="brand-text">
+              <span class="brand-name">Daniel Ranzino</span>
+              <span class="brand-sub">LSU &bull; Info Systems</span>
             </div>
-          </div>
-          <div class="card-actions">
-            <a href="project.html" class="link-btn">Details in Projects &rarr;</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <div class="card-icon">⚡</div>
-            <span class="card-badge">Operations &amp; Scripting</span>
-          </div>
-          <div class="card-body">
-            <h3>Repair Ticket Status Automation</h3>
-            <p>Developed an automation script for the IT manager at NOLA Education to compile and update statuses across computer repair tickets, accelerating issue resolution.</p>
-            <div class="tags-list">
-              <span class="tag">Python</span>
-              <span class="tag">Automation</span>
-              <span class="tag">IT Operations</span>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="project.html" class="link-btn">Details in Projects &rarr;</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-top">
-            <div class="card-icon">🌐</div>
-            <span class="card-badge">Web &amp; Vibe-Coding</span>
-          </div>
-          <div class="card-body">
-            <h3>Personal Portfolio &amp; Guestbook</h3>
-            <p>A multi-page responsive personal web platform created with modern CSS, glassmorphism, responsive navigation, and an interactive visitor guestbook with local persistence.</p>
-            <div class="tags-list">
-              <span class="tag">HTML5</span>
-              <span class="tag">Vanilla CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Git / GitHub</span>
-            </div>
-          </div>
-          <div class="card-actions">
-            <a href="project.html" class="link-btn">Explore Projects &rarr;</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Connect / Contact CTA -->
-    <section class="section" id="contact-section">
-      <div class="card" style="text-align: center; align-items: center; padding: 3rem 2rem;">
-        <span class="hero-badge" style="margin-bottom: 0.5rem;">Let's Connect</span>
-        <h2 style="font-size: 2rem; font-weight: 700; color: #fff;">Get in Touch with Daniel</h2>
-        <p style="color: var(--text-muted); max-width: 540px; margin-top: 0.5rem;">
-          Based in Baton Rouge, LA. Open to opportunities in Information Systems, IT operations, analytics, and software solutions.
-        </p>
-        <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-          <a href="mailto:danielranzino00@gmail.com" class="btn btn-primary" id="email-cta">
-            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            <span>danielranzino00@gmail.com</span>
           </a>
-          <a href="tel:2253852547" class="btn btn-secondary">
-            <span>(225) 385-2547</span>
-          </a>
-          <a href="Daniel_Ranzino_Resume.pdf" target="_blank" class="btn btn-secondary">
-            <span>Download Resume PDF</span>
+
+          <div class="nav-section">
+            <span class="nav-section-title">Navigation</span>
+            <nav aria-label="Main Navigation" class="sidebar-nav">
+              <ul class="nav-links">
+                <li>
+                  <a href="index.html" class="active" id="nav-home">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="project.html" id="nav-projects">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span>Projects</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="resume.html" id="nav-resume">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Resume</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="guestbook.html" id="nav-guestbook">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    <span>Guestbook</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-status">
+            <span class="pulse-dot"></span>
+            <span>Open to Opportunities</span>
+          </div>
+          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
           </a>
         </div>
       </div>
-    </section>
-  </main>
+    </aside>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-copy">
-        &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="guestbook.html">Guestbook</a>
-        <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+    <!-- Main Content Column -->
+    <div class="app-content">
+      <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" id="hero-section">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>LSU Senior &bull; Graduating Dec 2026</span>
+          </div>
+          <h1 class="hero-title">
+            Daniel Ranzino &mdash; <span class="gradient-text">Information Systems &amp; Analytics</span>
+          </h1>
+          <p class="hero-subtitle">
+            I am Daniel Ranzino, a senior at Louisiana State University. This is a sample website to showcase my understanding of vibe-coding, and a bit of personal information such as my resume. Please sign the guestbook and let me know what you think!
+          </p>
+          <div class="hero-cta">
+            <a href="resume.html" class="btn btn-primary" id="hero-cta-resume">
+              <span>View Resume</span>
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+            </a>
+            <a href="project.html" class="btn btn-secondary" id="hero-cta-projects">
+              <span>Explore Projects</span>
+            </a>
+            <a href="guestbook.html" class="btn btn-secondary" id="hero-cta-guestbook">
+              <span>✍️ Sign Guestbook</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Highlights / Key Metrics -->
+        <section class="stats-grid" id="stats-section">
+          <div class="stat-card">
+            <div class="stat-num">LSU</div>
+            <div class="stat-desc">Senior &bull; Info Systems &amp; Analytics</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">3.08</div>
+            <div class="stat-desc">Cumulative GPA</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">20+</div>
+            <div class="stat-desc">Schools Classroom Systems Setup</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">AITP</div>
+            <div class="stat-desc">LSU Member &bull; Tech Community</div>
+          </div>
+        </section>
+
+        <!-- Resume & Portfolio Overview Directory -->
+        <section class="section" id="resume-directory-section">
+          <div class="section-header">
+            <span class="section-tag">Resume Directory</span>
+            <h2>Core Background &amp; Experience Index</h2>
+            <p>A comprehensive overview touching all aspects of my resume. Explore each listing below, with direct links providing expanded context across dedicated pages.</p>
+          </div>
+
+          <div class="resume-directory">
+            <!-- Group 1: Education -->
+            <div class="directory-group">
+              <div class="directory-category-tag">
+                <span>🎓 Academic Background</span>
+              </div>
+              <div class="directory-list">
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Bachelors in Information Systems &amp; Analytics</h3>
+                      <span class="directory-item-org">Louisiana State University (LSU) &bull; Baton Rouge, LA</span>
+                    </div>
+                    <span class="directory-item-badge">Dec 2026 &bull; GPA: 3.08</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Senior curriculum emphasizing systems architecture, analytics, database modeling, and cybersecurity. Key coursework includes Cyber Risk Management, Analysis &amp; Design of Information Systems, and Computer Networking &amp; Security.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">B.S. Degree</span>
+                      <span class="tag">Cyber Risk</span>
+                      <span class="tag">Systems Analysis</span>
+                      <span class="tag">Network Security</span>
+                    </div>
+                    <a href="resume.html#education-section" class="directory-link">
+                      <span>View in Resume</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Group 2: Professional Experience -->
+            <div class="directory-group">
+              <div class="directory-category-tag">
+                <span>💼 Work Experience</span>
+              </div>
+              <div class="directory-list">
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Operations Intern</h3>
+                      <span class="directory-item-org">NOLA Education &bull; New Orleans, LA</span>
+                    </div>
+                    <span class="directory-item-badge">Summers 2025 &amp; 2026</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Assembled and inventoried computer systems across classrooms in 20+ schools, conducted bug testing and quality assurance on curriculum software, performed district network onboarding, and engineered a custom script for IT repair ticket tracking.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">IT Operations</span>
+                      <span class="tag">20+ Schools Staging</span>
+                      <span class="tag">Software QA</span>
+                      <span class="tag">Network Onboarding</span>
+                      <span class="tag">Python Automation</span>
+                    </div>
+                    <a href="resume.html#experience-section" class="directory-link">
+                      <span>View in Resume</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Group 3: Technical Projects & Systems -->
+            <div class="directory-group">
+              <div class="directory-category-tag">
+                <span>🛠️ Technical Projects</span>
+              </div>
+              <div class="directory-list">
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Repair Ticket Status Automation Script</h3>
+                      <span class="directory-item-org">NOLA Education &bull; IT Automation Tool</span>
+                    </div>
+                    <span class="directory-item-badge">Python Scripting</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Engineered an automation workflow for the IT manager to extract, compile, and update hardware repair ticket statuses, reducing manual overhead and expediting computer repair turnaround.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">Python</span>
+                      <span class="tag">Automation</span>
+                      <span class="tag">Ticket Management</span>
+                      <span class="tag">IT Workflow</span>
+                    </div>
+                    <a href="project.html" class="directory-link">
+                      <span>View in Projects</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Personal Computer Build &amp; Workstation Maintenance</h3>
+                      <span class="directory-item-org">Custom Hardware Engineering</span>
+                    </div>
+                    <span class="directory-item-badge">Hardware &amp; Systems</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Sourced, engineered, assembled, and continuously optimizing a high-performance personal computer workstation configured for systems development, data analytics, and intensive multitasking.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">PC Assembly</span>
+                      <span class="tag">Hardware Architecture</span>
+                      <span class="tag">System Tuning</span>
+                      <span class="tag">Troubleshooting</span>
+                    </div>
+                    <a href="project.html" class="directory-link">
+                      <span>View in Projects</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Vibe-Coded Web Platform &amp; Interactive Guestbook</h3>
+                      <span class="directory-item-org">Responsive Web Application</span>
+                    </div>
+                    <span class="directory-item-badge">Web &amp; Vibe-Coding</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    A multi-page portfolio and community platform built with vanilla HTML/CSS/JS demonstrating vibe-coding paradigms, glassmorphism UI design, and an interactive local-storage guestbook.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">HTML5 / CSS3</span>
+                      <span class="tag">JavaScript</span>
+                      <span class="tag">Glassmorphism</span>
+                      <span class="tag">Git &amp; GitHub Pages</span>
+                    </div>
+                    <a href="project.html" class="directory-link">
+                      <span>View in Projects</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Group 4: Skills & Certifications -->
+            <div class="directory-group">
+              <div class="directory-category-tag">
+                <span>⚡ Technical Skills &amp; Credentials</span>
+              </div>
+              <div class="directory-list">
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Technical Capabilities &amp; Software Matrix</h3>
+                      <span class="directory-item-org">Programming, Analytics &amp; Productivity</span>
+                    </div>
+                    <span class="directory-item-badge">Core Tooling</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Proficient in relational databases and querying with SQL, scripting in Python, frontend markup with HTML5/CSS, multimedia editing via Adobe Photoshop, spreadsheet analytics in Microsoft Excel, and software QA testing.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">SQL</span>
+                      <span class="tag">Python</span>
+                      <span class="tag">Excel / Office</span>
+                      <span class="tag">Adobe Photoshop</span>
+                      <span class="tag">Software QA</span>
+                    </div>
+                    <a href="resume.html#skills-section" class="directory-link">
+                      <span>View in Resume</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Professional Certification Pathways</h3>
+                      <span class="directory-item-org">Networking, Audit &amp; Information Security</span>
+                    </div>
+                    <span class="directory-item-badge">Active Preparation</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Actively preparing for industry certifications to complement undergraduate studies in Information Systems, focusing on network infrastructure, information systems auditing, and security management.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">CompTIA Network+</span>
+                      <span class="tag">CISA (Auditing)</span>
+                      <span class="tag">CISSP (Security)</span>
+                    </div>
+                    <a href="resume.html#skills-section" class="directory-link">
+                      <span>View in Resume</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Group 5: Campus Affiliations & Leadership -->
+            <div class="directory-group">
+              <div class="directory-category-tag">
+                <span>👥 Activities &amp; Leadership</span>
+              </div>
+              <div class="directory-list">
+                <article class="directory-item">
+                  <div class="directory-item-header">
+                    <div class="directory-title-area">
+                      <h3 class="directory-item-title">Association of Information Technology Professionals (AITP)</h3>
+                      <span class="directory-item-org">LSU Student Chapter &bull; Active Member</span>
+                    </div>
+                    <span class="directory-item-badge">Campus Community</span>
+                  </div>
+                  <p class="directory-item-desc">
+                    Active member engaging in IT industry tech seminars, professional workshops, collaborative tech discussions, and networking with technology leaders across the Baton Rouge and Louisiana region.
+                  </p>
+                  <div class="directory-item-footer">
+                    <div class="directory-tags">
+                      <span class="tag">AITP Member</span>
+                      <span class="tag">LSU Chapter</span>
+                      <span class="tag">Tech Community</span>
+                      <span class="tag">Networking</span>
+                    </div>
+                    <a href="resume.html#activities-section" class="directory-link">
+                      <span>View in Resume</span>
+                      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Connect / Contact CTA -->
+        <section class="section" id="contact-section">
+          <div class="card" style="text-align: center; align-items: center; padding: 1.85rem 1.5rem;">
+            <span class="hero-badge" style="margin-bottom: 0.35rem;">Let's Connect</span>
+            <h2 style="font-size: 1.75rem; font-weight: 700; color: #fff;">Get in Touch with Daniel</h2>
+            <p style="color: var(--text-muted); max-width: 540px; margin-top: 0.35rem; font-size: 0.95rem;">
+              Based in Baton Rouge, LA. Open to opportunities in Information Systems, IT operations, analytics, and software solutions.
+            </p>
+            <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+              <a href="mailto:danielranzino00@gmail.com" class="btn btn-primary" id="email-cta">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>danielranzino00@gmail.com</span>
+              </a>
+              <a href="tel:2253852547" class="btn btn-secondary">
+                <span>(225) 385-2547</span>
+              </a>
+              <a href="Daniel_Ranzino_Resume.pdf" target="_blank" class="btn btn-secondary">
+                <span>Download Resume PDF</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-copy">
+            &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
-  </footer>
+  </div>
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();

@@ -19,8 +19,8 @@
       border: 1px solid var(--border-subtle);
       color: var(--text-muted);
       padding: 0.5rem 1.15rem;
-      border-radius: var(--radius-full);
-      font-size: 0.875rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
       font-weight: 600;
       cursor: pointer;
       transition: all var(--transition-fast);
@@ -28,12 +28,14 @@
     }
     .filter-btn:hover {
       color: var(--text-main);
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(186, 215, 242, 0.3);
+      background: rgba(255, 255, 255, 0.05);
     }
     .filter-btn.active {
-      background: rgba(99, 102, 241, 0.2);
+      background: rgba(125, 211, 252, 0.15);
       border-color: var(--primary);
       color: #fff;
+      box-shadow: 0 0 12px rgba(125, 211, 252, 0.15);
     }
     .project-card-hidden {
       display: none !important;
@@ -41,197 +43,237 @@
   </style>
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header class="site-header">
-    <div class="container site-nav">
-      <a href="index.html" class="brand-logo" id="brand-logo">
-        <span class="logo-symbol">DR</span>
-        <span>Daniel Ranzino</span>
-      </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" id="nav-home">Home</a></li>
-          <li><a href="project.html" class="active" id="nav-projects">Projects</a></li>
-          <li><a href="resume.html" id="nav-resume">Resume</a></li>
-          <li><a href="guestbook.html" id="nav-guestbook">Guestbook</a></li>
-        </ul>
-      </nav>
-      <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-        </svg>
-        <span>GitHub</span>
-      </a>
-    </div>
-  </header>
+  <div class="app-layout">
+    <!-- Enclosed Left-Hand Sidebar -->
+    <aside class="app-sidebar">
+      <div class="sidebar-inner">
+        <div class="sidebar-top">
+          <a href="index.html" class="brand-logo" id="brand-logo">
+            <span class="logo-symbol">DR</span>
+            <div class="brand-text">
+              <span class="brand-name">Daniel Ranzino</span>
+              <span class="brand-sub">LSU &bull; Info Systems</span>
+            </div>
+          </a>
 
-  <!-- Main Content -->
-  <main class="container">
-    <!-- Projects Hero Header -->
-    <section class="hero" style="padding-bottom: 2rem;">
-      <div class="hero-badge">
-        <span>Portfolio &amp; Experience Highlights</span>
+          <div class="nav-section">
+            <span class="nav-section-title">Navigation</span>
+            <nav aria-label="Main Navigation" class="sidebar-nav">
+              <ul class="nav-links">
+                <li>
+                  <a href="index.html" id="nav-home">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="project.html" class="active" id="nav-projects">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span>Projects</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="resume.html" id="nav-resume">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>Resume</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="guestbook.html" id="nav-guestbook">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+                    <span>Guestbook</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-status">
+            <span class="pulse-dot"></span>
+            <span>Open to Opportunities</span>
+          </div>
+          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="nav-action-btn" id="github-link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+            </svg>
+            <span>GitHub</span>
+          </a>
+        </div>
       </div>
-      <h1 class="hero-title">Technical <span class="gradient-text">Projects &amp; Systems</span></h1>
-      <p class="hero-subtitle">
-        Hands-on systems builds, automation scripts, and technical implementations derived from my professional internships, academic work at LSU, and personal engineering projects.
-      </p>
-    </section>
+    </aside>
 
-    <!-- Project Filter Buttons -->
-    <div class="filter-tabs" role="tablist" aria-label="Filter projects">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="hardware">Hardware &amp; Systems</button>
-      <button class="filter-btn" data-filter="automation">Automation &amp; Code</button>
-      <button class="filter-btn" data-filter="operations">Operations &amp; Security</button>
+    <!-- Main Content Column -->
+    <div class="app-content">
+      <main class="container">
+        <!-- Projects Hero Header -->
+        <section class="hero">
+          <div class="hero-badge">
+            <span>Portfolio &amp; Experience Highlights</span>
+          </div>
+          <h1 class="hero-title">Technical <span class="gradient-text">Projects &amp; Systems</span></h1>
+          <p class="hero-subtitle">
+            Hands-on systems builds, automation scripts, and technical implementations derived from my professional internships, academic work at LSU, and personal engineering projects.
+          </p>
+        </section>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-tabs" role="tablist" aria-label="Filter projects">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="hardware">Hardware &amp; Systems</button>
+          <button class="filter-btn" data-filter="automation">Automation &amp; Code</button>
+          <button class="filter-btn" data-filter="operations">Operations &amp; Security</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <section class="card-grid" id="projects-grid">
+          <!-- Project 1: Personal Computer Build -->
+          <article class="card" data-category="hardware">
+            <div class="card-top">
+              <div class="card-icon">🖥️</div>
+              <span class="card-badge">Hardware &amp; Systems</span>
+            </div>
+            <div class="card-body">
+              <h3>Personal Computer Build &amp; Maintenance</h3>
+              <p>Sourced, assembled, and currently maintaining a personal workstation computer. Configured component architecture, BIOS/UEFI settings, thermal management, and reliable everyday operation.</p>
+              <div class="tags-list">
+                <span class="tag">PC Assembly</span>
+                <span class="tag">Hardware</span>
+                <span class="tag">System Config</span>
+                <span class="tag">Troubleshooting</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="resume.html#projects-section" class="link-btn">View on Resume &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 2: Repair Ticket Automation -->
+          <article class="card" data-category="automation">
+            <div class="card-top">
+              <div class="card-icon">⚙️</div>
+              <span class="card-badge">Automation &amp; Code</span>
+            </div>
+            <div class="card-body">
+              <h3>Repair Ticket Status Automation Script</h3>
+              <p>Assisted the IT manager at NOLA Education by developing a custom script to automatically compile and update statuses of computer repair tickets, streamlining service turnaround times.</p>
+              <div class="tags-list">
+                <span class="tag">Python</span>
+                <span class="tag">IT Scripting</span>
+                <span class="tag">Ticketing Automation</span>
+                <span class="tag">Workflow</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="resume.html#experience-section" class="link-btn">Read in Experience &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 3: Vibe-Coding Personal Portfolio -->
+          <article class="card" data-category="automation">
+            <div class="card-top">
+              <div class="card-icon">🌐</div>
+              <span class="card-badge">Web &amp; Vibe-Coding</span>
+            </div>
+            <div class="card-body">
+              <h3>Vibe-Coded Website &amp; Interactive Guestbook</h3>
+              <p>Multi-page personal website built to showcase understanding of vibe-coding, responsive CSS design systems, and an interactive visitor guestbook with local persistence.</p>
+              <div class="tags-list">
+                <span class="tag">HTML5</span>
+                <span class="tag">Vanilla CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo &rarr;</a>
+              <a href="guestbook.html" class="link-btn">Try Guestbook &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 4: 20+ Schools Systems Deployment -->
+          <article class="card" data-category="operations">
+            <div class="card-top">
+              <div class="card-icon">🏫</div>
+              <span class="card-badge">Operations &amp; Security</span>
+            </div>
+            <div class="card-body">
+              <h3>Classroom Computer Deployment (20+ Schools)</h3>
+              <p>Assembled and inventoried desktop computers in classrooms across 20+ schools. Performed systems setup, installed third-party educational software, and collaborated with district IT staff for network onboarding.</p>
+              <div class="tags-list">
+                <span class="tag">Network Onboarding</span>
+                <span class="tag">System Setup</span>
+                <span class="tag">Inventory</span>
+                <span class="tag">NOLA Education</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="resume.html#experience-section" class="link-btn">Internship Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 5: Curriculum Software QA -->
+          <article class="card" data-category="operations">
+            <div class="card-top">
+              <div class="card-icon">🔍</div>
+              <span class="card-badge">Operations &amp; Security</span>
+            </div>
+            <div class="card-body">
+              <h3>Curriculum Software QA &amp; Bug Testing</h3>
+              <p>Conducted systematic quality assurance and bug testing on educational curriculum software to ensure bug-free deployment across multi-district school environments.</p>
+              <div class="tags-list">
+                <span class="tag">QA Testing</span>
+                <span class="tag">Bug Tracking</span>
+                <span class="tag">Educational Software</span>
+                <span class="tag">Staging</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="resume.html#experience-section" class="link-btn">View Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Project 6: Cyber Risk & Networking Coursework -->
+          <article class="card" data-category="hardware">
+            <div class="card-top">
+              <div class="card-icon">🛡️</div>
+              <span class="card-badge">Hardware &amp; Systems</span>
+            </div>
+            <div class="card-body">
+              <h3>Cyber Risk &amp; Information Systems Analysis</h3>
+              <p>Coursework in LSU Information Systems &amp; Analytics covering Cyber Risk Management, Information Systems Analysis and Design, and Computer Networking &amp; Security.</p>
+              <div class="tags-list">
+                <span class="tag">Risk Management</span>
+                <span class="tag">Networking</span>
+                <span class="tag">Security</span>
+                <span class="tag">LSU ISA</span>
+              </div>
+            </div>
+            <div class="card-actions">
+              <a href="resume.html#education-section" class="link-btn">Academic Background &rarr;</a>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="container footer-content">
+          <div class="footer-copy">
+            &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
+          </div>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="guestbook.html">Guestbook</a>
+            <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <!-- Projects Grid -->
-    <section class="card-grid" id="projects-grid">
-      <!-- Project 1: Personal Computer Build -->
-      <article class="card" data-category="hardware">
-        <div class="card-top">
-          <div class="card-icon">🖥️</div>
-          <span class="card-badge">Hardware &amp; Systems</span>
-        </div>
-        <div class="card-body">
-          <h3>Personal Computer Build &amp; Maintenance</h3>
-          <p>Sourced, assembled, and currently maintaining a personal workstation computer. Configured component architecture, BIOS/UEFI settings, thermal management, and reliable everyday operation.</p>
-          <div class="tags-list">
-            <span class="tag">PC Assembly</span>
-            <span class="tag">Hardware</span>
-            <span class="tag">System Config</span>
-            <span class="tag">Troubleshooting</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="resume.html#projects-section" class="link-btn">View on Resume &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 2: Repair Ticket Automation -->
-      <article class="card" data-category="automation">
-        <div class="card-top">
-          <div class="card-icon">⚙️</div>
-          <span class="card-badge">Automation &amp; Code</span>
-        </div>
-        <div class="card-body">
-          <h3>Repair Ticket Status Automation Script</h3>
-          <p>Assisted the IT manager at NOLA Education by developing a custom script to automatically compile and update statuses of computer repair tickets, streamlining service turnaround times.</p>
-          <div class="tags-list">
-            <span class="tag">Python</span>
-            <span class="tag">IT Scripting</span>
-            <span class="tag">Ticketing Automation</span>
-            <span class="tag">Workflow</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="resume.html#experience-section" class="link-btn">Read in Experience &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 3: Vibe-Coding Personal Portfolio -->
-      <article class="card" data-category="automation">
-        <div class="card-top">
-          <div class="card-icon">🌐</div>
-          <span class="card-badge">Web &amp; Vibe-Coding</span>
-        </div>
-        <div class="card-body">
-          <h3>Vibe-Coded Website &amp; Interactive Guestbook</h3>
-          <p>Multi-page personal website built to showcase understanding of vibe-coding, responsive CSS design systems, and an interactive visitor guestbook with local persistence.</p>
-          <div class="tags-list">
-            <span class="tag">HTML5</span>
-            <span class="tag">Vanilla CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">GitHub Pages</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer" class="link-btn">GitHub Repo &rarr;</a>
-          <a href="guestbook.html" class="link-btn">Try Guestbook &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 4: 20+ Schools Systems Deployment -->
-      <article class="card" data-category="operations">
-        <div class="card-top">
-          <div class="card-icon">🏫</div>
-          <span class="card-badge">Operations &amp; Security</span>
-        </div>
-        <div class="card-body">
-          <h3>Classroom Computer Deployment (20+ Schools)</h3>
-          <p>Assembled and inventoried desktop computers in classrooms across 20+ schools. Performed systems setup, installed third-party educational software, and collaborated with district IT staff for network onboarding.</p>
-          <div class="tags-list">
-            <span class="tag">Network Onboarding</span>
-            <span class="tag">System Setup</span>
-            <span class="tag">Inventory</span>
-            <span class="tag">NOLA Education</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="resume.html#experience-section" class="link-btn">Internship Details &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 5: Curriculum Software QA -->
-      <article class="card" data-category="operations">
-        <div class="card-top">
-          <div class="card-icon">🔍</div>
-          <span class="card-badge">Operations &amp; Security</span>
-        </div>
-        <div class="card-body">
-          <h3>Curriculum Software QA &amp; Bug Testing</h3>
-          <p>Conducted systematic quality assurance and bug testing on educational curriculum software to ensure bug-free deployment across multi-district school environments.</p>
-          <div class="tags-list">
-            <span class="tag">QA Testing</span>
-            <span class="tag">Bug Tracking</span>
-            <span class="tag">Educational Software</span>
-            <span class="tag">Staging</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="resume.html#experience-section" class="link-btn">View Details &rarr;</a>
-        </div>
-      </article>
-
-      <!-- Project 6: Cyber Risk & Networking Coursework -->
-      <article class="card" data-category="hardware">
-        <div class="card-top">
-          <div class="card-icon">🛡️</div>
-          <span class="card-badge">Hardware &amp; Systems</span>
-        </div>
-        <div class="card-body">
-          <h3>Cyber Risk &amp; Information Systems Analysis</h3>
-          <p>Coursework in LSU Information Systems &amp; Analytics covering Cyber Risk Management, Information Systems Analysis and Design, and Computer Networking &amp; Security.</p>
-          <div class="tags-list">
-            <span class="tag">Risk Management</span>
-            <span class="tag">Networking</span>
-            <span class="tag">Security</span>
-            <span class="tag">LSU ISA</span>
-          </div>
-        </div>
-        <div class="card-actions">
-          <a href="resume.html#education-section" class="link-btn">Academic Background &rarr;</a>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-copy">
-        &copy; <span id="current-year">2026</span> Daniel Ranzino &bull; Louisiana State University.
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="project.html">Projects</a>
-        <a href="resume.html">Resume</a>
-        <a href="guestbook.html">Guestbook</a>
-        <a href="https://github.com/dranzino/dranzinowebsite2026" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-    </div>
-  </footer>
+  </div>
 
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
